@@ -30,7 +30,7 @@ export function AdPlaceholder({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        bgcolor: "rgba(255,255,255,0.03)",
+        bgcolor: "#0a0a0f",
         border: "1px dashed rgba(255,255,255,0.15)",
         borderRadius: 2,
         color: "rgba(255,255,255,0.3)",
