@@ -27,7 +27,7 @@ export const ADSENSE_CONFIG = {
     footerLeaderboard: process.env.NEXT_PUBLIC_ADSENSE_SLOT_FOOTER || 'XXXXXXXXXX',
 
     // Anúncio no meio do conteúdo (responsivo)
-    inArticle: process.env.NEXT_PUBLIC_ADSENSE_SLOT_ARTICLE || 'XXXXXXXXXX',
+    inArticle: process.env.NEXT_PUBLIC_ADSENSE_SLOT_ARTICLE || '5793889679',
 
     // Sidebar (160x600)
     sidebar: process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR || 'XXXXXXXXXX',
