@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Providers } from "./providers";
+import { ADSENSE_CONFIG } from "@/lib/adsense-config";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -184,8 +185,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Google AdSense - Replace with your actual code */}
-        {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossOrigin="anonymous"></script> */}
+        {/* Google AdSense */}
+        {ADSENSE_CONFIG.enabled && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CONFIG.publisherId}`}
+            crossOrigin="anonymous"
+          />
+        )}
       </head>
       <body>
         <Providers>{children}</Providers>

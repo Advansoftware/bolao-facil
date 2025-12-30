@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Box,
   Container,
@@ -23,7 +24,8 @@ import SpeedIcon from "@mui/icons-material/Speed";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import CloudOffIcon from "@mui/icons-material/CloudOff";
-import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { AdSense } from "@/components/AdSense";
+import { Footer } from "@/components/Footer";
 import { LOTTERY_TYPES } from "@/lib/lottery-types";
 
 const features = [
@@ -132,7 +134,7 @@ export default function LandingPage() {
     <Box sx={{ bgcolor: "#0a0a0f", minHeight: "100vh" }}>
       {/* Header Ad */}
       <Container maxWidth="lg" sx={{ pt: 2 }}>
-        <AdPlaceholder height={90} label="Anúncio - Leaderboard 728x90" />
+        <AdSense slot="headerLeaderboard" format="horizontal" />
       </Container>
 
       {/* Hero Section */}
@@ -295,7 +297,7 @@ export default function LandingPage() {
 
       {/* Mid Ad */}
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <AdPlaceholder height={250} label="Anúncio - Rectangle 300x250" />
+        <AdSense slot="mediumRectangle" format="rectangle" />
       </Container>
 
       {/* How It Works */}
@@ -415,7 +417,7 @@ export default function LandingPage() {
 
       {/* Ad before FAQ */}
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <AdPlaceholder height={90} label="Anúncio - Leaderboard 728x90" />
+        <AdSense slot="inArticle" format="horizontal" />
       </Container>
 
       {/* FAQ */}
@@ -557,10 +559,249 @@ export default function LandingPage() {
         </Container>
       </Box>
 
+      {/* Blog Section */}
+      <Container maxWidth="lg" sx={{ py: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: 800,
+              color: "white",
+              mb: 2,
+              fontSize: { xs: "2rem", md: "2.5rem" },
+            }}
+          >
+            📚 Blog: Aprenda Mais Sobre Bolões
+          </Typography>
+          <Typography
+            sx={{
+              color: "rgba(255,255,255,0.7)",
+              fontSize: "1.1rem",
+              maxWidth: 700,
+              mx: "auto",
+            }}
+          >
+            Guias completos, dicas práticas e estratégias para organizar bolões de sucesso
+          </Typography>
+        </Box>
+
+        <Grid container spacing={4}>
+          {/* Article 1 */}
+          <Grid size={{ xs: 12, md: 4 }}>
+            <Link href="/blog/como-organizar-bolao-mega-sena" style={{ textDecoration: "none" }}>
+              <Paper
+                sx={{
+                  p: 3,
+                  height: "100%",
+                  bgcolor: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: 3,
+                  transition: "all 0.3s ease",
+                  cursor: "pointer",
+                  "&:hover": {
+                    bgcolor: "rgba(255,255,255,0.05)",
+                    borderColor: "#22c55e",
+                    transform: "translateY(-4px)",
+                  },
+                }}
+              >
+                <Chip
+                  label="Guia Completo"
+                  sx={{
+                    bgcolor: "rgba(34, 197, 94, 0.2)",
+                    color: "#22c55e",
+                    fontWeight: 600,
+                    mb: 2,
+                    border: "1px solid rgba(34, 197, 94, 0.4)",
+                  }}
+                />
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: "white",
+                    fontWeight: 700,
+                    mb: 2,
+                    lineHeight: 1.3,
+                  }}
+                >
+                  Como Organizar um Bolão de Mega-Sena
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "rgba(255,255,255,0.6)",
+                    mb: 3,
+                    lineHeight: 1.6,
+                  }}
+                >
+                  Guia passo a passo completo para organizar seu bolão com amigos. Aprenda sobre gestão de participantes, cálculo de cotas e documentação.
+                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                  <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem" }}>
+                    8 min de leitura
+                  </Typography>
+                  <Typography sx={{ color: "#22c55e", fontWeight: 600 }}>
+                    Ler artigo →
+                  </Typography>
+                </Box>
+              </Paper>
+            </Link>
+          </Grid>
+
+          {/* Article 2 */}
+          <Grid size={{ xs: 12, md: 4 }}>
+            <Link href="/blog/diferencas-mega-sena-lotofacil-quina" style={{ textDecoration: "none" }}>
+              <Paper
+                sx={{
+                  p: 3,
+                  height: "100%",
+                  bgcolor: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: 3,
+                  transition: "all 0.3s ease",
+                  cursor: "pointer",
+                  "&:hover": {
+                    bgcolor: "rgba(255,255,255,0.05)",
+                    borderColor: "#3b82f6",
+                    transform: "translateY(-4px)",
+                  },
+                }}
+              >
+                <Chip
+                  label="Comparativo"
+                  sx={{
+                    bgcolor: "rgba(59, 130, 246, 0.2)",
+                    color: "#3b82f6",
+                    fontWeight: 600,
+                    mb: 2,
+                    border: "1px solid rgba(59, 130, 246, 0.4)",
+                  }}
+                />
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: "white",
+                    fontWeight: 700,
+                    mb: 2,
+                    lineHeight: 1.3,
+                  }}
+                >
+                  Diferenças Entre Mega-Sena, Lotofácil e Quina
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "rgba(255,255,255,0.6)",
+                    mb: 3,
+                    lineHeight: 1.6,
+                  }}
+                >
+                  Comparativo completo entre as principais loterias. Entenda regras, probabilidades e qual é a melhor para seu bolão.
+                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                  <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem" }}>
+                    10 min de leitura
+                  </Typography>
+                  <Typography sx={{ color: "#3b82f6", fontWeight: 600 }}>
+                    Ler artigo →
+                  </Typography>
+                </Box>
+              </Paper>
+            </Link>
+          </Grid>
+
+          {/* Article 3 */}
+          <Grid size={{ xs: 12, md: 4 }}>
+            <Link href="/blog/bolao-mega-virada" style={{ textDecoration: "none" }}>
+              <Paper
+                sx={{
+                  p: 3,
+                  height: "100%",
+                  bgcolor: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: 3,
+                  transition: "all 0.3s ease",
+                  cursor: "pointer",
+                  "&:hover": {
+                    bgcolor: "rgba(255,255,255,0.05)",
+                    borderColor: "#ec4899",
+                    transform: "translateY(-4px)",
+                  },
+                }}
+              >
+                <Chip
+                  label="Especial"
+                  sx={{
+                    bgcolor: "rgba(236, 72, 153, 0.2)",
+                    color: "#ec4899",
+                    fontWeight: 600,
+                    mb: 2,
+                    border: "1px solid rgba(236, 72, 153, 0.4)",
+                  }}
+                />
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: "white",
+                    fontWeight: 700,
+                    mb: 2,
+                    lineHeight: 1.3,
+                  }}
+                >
+                  Bolão da Mega da Virada
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "rgba(255,255,255,0.6)",
+                    mb: 3,
+                    lineHeight: 1.6,
+                  }}
+                >
+                  Guia especial para o maior sorteio do ano. Timeline, estratégias para grandes grupos e checklist completo.
+                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                  <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem" }}>
+                    10 min de leitura
+                  </Typography>
+                  <Typography sx={{ color: "#ec4899", fontWeight: 600 }}>
+                    Ler artigo →
+                  </Typography>
+                </Box>
+              </Paper>
+            </Link>
+          </Grid>
+        </Grid>
+
+        {/* View All Blog Button */}
+        <Box sx={{ textAlign: "center", mt: 6 }}>
+          <Link href="/blog" style={{ textDecoration: "none" }}>
+            <Button
+              variant="outlined"
+              size="large"
+              sx={{
+                borderColor: "rgba(255,255,255,0.2)",
+                color: "white",
+                px: 4,
+                py: 1.5,
+                fontSize: "1rem",
+                fontWeight: 600,
+                borderRadius: 2,
+                "&:hover": {
+                  borderColor: "#22c55e",
+                  bgcolor: "rgba(34, 197, 94, 0.1)",
+                },
+              }}
+            >
+              Ver Todos os Artigos do Blog
+            </Button>
+          </Link>
+        </Box>
+      </Container>
+
       {/* Footer Ad */}
       <Container maxWidth="lg" sx={{ pb: 4 }}>
-        <AdPlaceholder height={90} label="Anúncio - Leaderboard 728x90" />
+        <AdSense slot="footerLeaderboard" format="horizontal" />
       </Container>
+      
+      <Footer />
     </Box>
   );
 }

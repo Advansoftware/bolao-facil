@@ -33,7 +33,8 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import HomeIcon from "@mui/icons-material/Home";
 import { ParticipantSection } from "@/components/ParticipantSection";
 import { BolaoExport } from "@/components/BolaoExport";
-import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { AdSense } from "@/components/AdSense";
+import { Footer } from "@/components/Footer";
 import {
   getBolaos,
   getBolao,
@@ -344,9 +345,8 @@ export default function GerenciadorPage() {
             </Box>
           </Box>
 
-          {/* Ad */}
           <Box mb={3}>
-            <AdPlaceholder height={90} label="Anúncio" />
+            <AdSense slot="inArticle" format="horizontal" />
           </Box>
 
           {/* Participants */}
@@ -407,6 +407,7 @@ export default function GerenciadorPage() {
             </Button>
           </DialogActions>
         </Dialog>
+        <Footer />
       </Box>
     );
   }
@@ -460,9 +461,8 @@ export default function GerenciadorPage() {
           </Button>
         </Box>
 
-        {/* Ad */}
         <Box mb={4}>
-          <AdPlaceholder height={90} label="Anúncio" />
+          <AdSense slot="inArticle" format="horizontal" />
         </Box>
 
         {/* Bolão list */}
