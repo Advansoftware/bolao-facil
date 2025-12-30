@@ -223,17 +223,7 @@ export default function TermosPage() {
               completo entre você e o Bolão Fácil.
             </Typography>
 
-            <Typography variant="h2">15. Contato</Typography>
-            <Typography paragraph>
-              Se você tiver dúvidas sobre estes Termos de Uso, entre em contato através das informações
-              disponíveis em nossa página{" "}
-              <Link href="/sobre" style={{ color: "#22c55e" }}>
-                Sobre
-              </Link>
-              .
-            </Typography>
-
-            <Typography variant="h2">16. Aceitação</Typography>
+            <Typography variant="h2">15. Aceitação</Typography>
             <Typography paragraph sx={{ fontWeight: 600, color: "rgba(255,255,255,0.9)" }}>
               Ao usar o Bolão Fácil, você reconhece que leu, entendeu e concorda em estar vinculado a estes
               Termos de Uso.

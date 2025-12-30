@@ -161,8 +161,7 @@ export default function PrivacidadePage() {
             <Typography variant="h2">8. Dados de Menores</Typography>
             <Typography paragraph>
               Nosso serviço não é direcionado a menores de 18 anos. Não coletamos intencionalmente
-              informações de menores. Se você é pai/mãe ou responsável e acredita que seu filho nos
-              forneceu informações pessoais, entre em contato conosco.
+              informações de menores.
             </Typography>
 
             <Typography variant="h2">9. Links para Sites de Terceiros</Typography>
@@ -179,17 +178,7 @@ export default function PrivacidadePage() {
               atualização".
             </Typography>
 
-            <Typography variant="h2">11. Contato</Typography>
-            <Typography paragraph>
-              Se você tiver dúvidas sobre esta Política de Privacidade ou sobre como tratamos seus dados,
-              você pode nos contatar através do email disponível em nossa página{" "}
-              <Link href="/sobre" style={{ color: "#22c55e" }}>
-                Sobre
-              </Link>
-              .
-            </Typography>
-
-            <Typography variant="h2">12. Consentimento</Typography>
+            <Typography variant="h2">11. Consentimento</Typography>
             <Typography paragraph>
               Ao usar o Bolão Fácil, você concorda com esta Política de Privacidade e com o processamento
               de seus dados conforme descrito aqui.
