@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Box, Button, CircularProgress, Snackbar, Alert, Tooltip } from "@mui/material";
+import { Box, Button, CircularProgress, Snackbar, Alert, Tooltip, Grid } from "@mui/material";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import {
@@ -119,46 +119,52 @@ export function BolaoExport({ bolao }: BolaoExportProps) {
   };
 
   return (
-    <Box display="flex" gap={2}>
-      <Tooltip title="Gera um arquivo PDF com todos os jogos para impressão ou envio">
-        <span>
-          <Button
-            variant="contained"
-            startIcon={loading ? <CircularProgress size={20} color="inherit" /> : <PictureAsPdfIcon />}
-            onClick={generatePDF}
-            disabled={bolao.participants.length === 0 || loading}
-            sx={{
-              bgcolor: "#e53935",
-              color: "#ffffff",
-              "&:hover": { bgcolor: "#c62828" },
-              fontWeight: "bold",
-              px: 3,
-            }}
-          >
-            {loading ? "Gerando..." : "Exportar PDF"}
-          </Button>
-        </span>
-      </Tooltip>
+    <>
+      <Grid size={{ xs: 12, sm: "auto" }}>
+        <Tooltip title="Gera um arquivo PDF com todos os jogos para impressão ou envio">
+          <span style={{ display: "block" }}>
+            <Button
+              variant="contained"
+              fullWidth
+              startIcon={loading ? <CircularProgress size={20} color="inherit" /> : <PictureAsPdfIcon />}
+              onClick={generatePDF}
+              disabled={bolao.participants.length === 0 || loading}
+              sx={{
+                bgcolor: "#e53935",
+                color: "#ffffff",
+                "&:hover": { bgcolor: "#c62828" },
+                fontWeight: "bold",
+                px: 3,
+              }}
+            >
+              {loading ? "Gerando..." : "Exportar PDF"}
+            </Button>
+          </span>
+        </Tooltip>
+      </Grid>
 
-      <Tooltip title="Envia um resumo organizado dos jogos e participantes para o WhatsApp">
-        <span>
-          <Button
-            variant="contained"
-            startIcon={<WhatsAppIcon />}
-            onClick={handleWhatsAppExport}
-            disabled={bolao.participants.length === 0}
-            sx={{
-              bgcolor: "#25D366",
-              color: "#ffffff",
-              "&:hover": { bgcolor: "#128C7E" },
-              fontWeight: "bold",
-              px: 3,
-            }}
-          >
-            WhatsApp
-          </Button>
-        </span>
-      </Tooltip>
+      <Grid size={{ xs: 12, sm: "auto" }}>
+        <Tooltip title="Envia um resumo organizado dos jogos e participantes para o WhatsApp">
+          <span style={{ display: "block" }}>
+            <Button
+              variant="contained"
+              fullWidth
+              startIcon={<WhatsAppIcon />}
+              onClick={handleWhatsAppExport}
+              disabled={bolao.participants.length === 0}
+              sx={{
+                bgcolor: "#25D366",
+                color: "#ffffff",
+                "&:hover": { bgcolor: "#128C7E" },
+                fontWeight: "bold",
+                px: 3,
+              }}
+            >
+              WhatsApp
+            </Button>
+          </span>
+        </Tooltip>
+      </Grid>
 
       <Snackbar 
         open={!!error} 
@@ -170,6 +176,6 @@ export function BolaoExport({ bolao }: BolaoExportProps) {
           {error}
         </Alert>
       </Snackbar>
-    </Box>
+    </>
   );
 }

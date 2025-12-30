@@ -33,6 +33,8 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import HomeIcon from "@mui/icons-material/Home";
 import { ParticipantSection } from "@/components/ParticipantSection";
 import { BolaoExport } from "@/components/BolaoExport";
+import { BolaoImport } from "@/components/BolaoImport";
+import { ResultChecker } from "@/components/ResultChecker";
 import { AdSense } from "@/components/AdSense";
 import { Footer } from "@/components/Footer";
 import {
@@ -332,17 +334,27 @@ export default function GerenciadorPage() {
               )}
             </Box>
 
-            <Box display="flex" gap={2} mt={3}>
-              <Button
-                variant="contained"
-                startIcon={<PersonAddIcon />}
-                onClick={() => setParticipantOpen(true)}
-                sx={{ bgcolor: "white", color: lotteryConfig.color, "&:hover": { bgcolor: "#f0f0f0" } }}
-              >
-                Adicionar Participante
-              </Button>
+            <Grid container spacing={2} sx={{ mt: 2 }}>
+              <Grid size={{ xs: 12, sm: "auto" }}>
+                <Button
+                  variant="contained"
+                  fullWidth
+                  startIcon={<PersonAddIcon />}
+                  onClick={() => setParticipantOpen(true)}
+                  sx={{ 
+                    bgcolor: "white", 
+                    color: lotteryConfig.color, 
+                    "&:hover": { bgcolor: "#f0f0f0" },
+                  }}
+                >
+                  Adicionar Participante
+                </Button>
+              </Grid>
               <BolaoExport bolao={selectedBolao} />
-            </Box>
+              <Grid size={{ xs: 12, sm: "auto" }}>
+                <ResultChecker bolao={selectedBolao} lotteryConfig={lotteryConfig} />
+              </Grid>
+            </Grid>
           </Box>
 
           <Box mb={3}>
@@ -441,8 +453,8 @@ export default function GerenciadorPage() {
           </Typography>
         </Box>
 
-        {/* Create button */}
-        <Box display="flex" justifyContent="center" mb={4}>
+        {/* Create and Import buttons */}
+        <Box display="flex" justifyContent="center" gap={2} mb={4} flexWrap="wrap">
           <Button
             variant="contained"
             size="large"
@@ -459,6 +471,10 @@ export default function GerenciadorPage() {
           >
             Criar Novo Bolão
           </Button>
+          <BolaoImport onImportComplete={(bolao) => {
+            setBolaos(getBolaos());
+            setSelectedBolao(bolao);
+          }} />
         </Box>
 
         <Box mb={4}>
