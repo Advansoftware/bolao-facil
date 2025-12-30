@@ -12,8 +12,8 @@
  */
 
 export const ADSENSE_CONFIG = {
-  // Substitua com seu Publisher ID do AdSense
-  publisherId: process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || 'ca-pub-XXXXXXXXXXXXXXXX',
+  // Publisher ID do AdSense
+  publisherId: process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || 'ca-pub-9942287479317473',
 
   // IDs dos slots de anúncio (crie no painel do AdSense)
   slots: {
@@ -33,12 +33,12 @@ export const ADSENSE_CONFIG = {
     sidebar: process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR || 'XXXXXXXXXX',
   },
 
-  // Habilitar anúncios (desabilite em desenvolvimento)
-  enabled: process.env.NODE_ENV === 'production' &&
-    process.env.NEXT_PUBLIC_ADSENSE_ENABLED === 'true',
+  // Habilitar anúncios (agora sempre habilitado)
+  enabled: true,
 };
 
 export const isAdSenseConfigured = () => {
   return ADSENSE_CONFIG.publisherId !== 'ca-pub-XXXXXXXXXXXXXXXX' &&
     !ADSENSE_CONFIG.publisherId.includes('YOUR_PUBLISHER_ID');
 };
+
