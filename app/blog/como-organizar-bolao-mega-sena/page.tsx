@@ -230,6 +230,11 @@ export default function ArtigoBolaoMegaSenaPage() {
                 </li>
               </ul>
 
+              {/* Ad in Content */}
+              <Box sx={{ my: 4 }}>
+                <AdSense slot="inArticle" format="auto" />
+              </Box>
+
               <Typography variant="h3">3. Calcule os Valores</Typography>
               <Typography paragraph>
                 A matemática do bolão é simples, mas precisa ser clara para todos. Veja como calcular:

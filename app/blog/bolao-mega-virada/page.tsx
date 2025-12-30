@@ -61,7 +61,12 @@ export default function ArtigoBolaoMegaViradaPage() {
                 <li><strong>Prazo estendido:</strong> Apostas abrem semanas antes</li>
               </ul>
 
-              <Typography variant="h2">Quando Começar a Organizar</Typography>
+              {/* Ad in Content */}
+              <Box sx={{ my: 4 }}>
+                <AdSense slot="inArticle" format="auto" />
+              </Box>
+
+              <Typography variant="h2">Timeline da Organização</Typography>
 
               <Typography variant="h3">Timeline Recomendada</Typography>
               <ul>

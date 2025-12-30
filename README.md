@@ -38,6 +38,10 @@ O **Bolão Fácil** nasceu da necessidade de simplificar a organização de bol�
 ![Homepage](public/screenshot-hero.png)
 *Landing page com design moderno e call-to-action claro*
 
+### Seção de Blog na Homepage
+![Blog na Homepage](public/screenshot-homepage-blog.png)
+*Destaque para artigos educativos diretamente na página inicial*
+
 ### Blog com Conteúdo Educacional
 ![Blog](public/screenshot-blog.png)
 *5 artigos completos sobre organização de bolões (6.900+ palavras)*

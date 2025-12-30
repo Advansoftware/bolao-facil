@@ -52,7 +52,12 @@ export default function ArtigoDicasGerenciarPage() {
                 Gerenciar um bolão vai além de apenas juntar dinheiro e fazer apostas. Requer organização, comunicação clara e ferramentas adequadas. Aqui estão as melhores práticas para garantir o sucesso do seu bolão.
               </Typography>
 
-              <Typography variant="h2">1. Comunicação e Transparência</Typography>
+              {/* Ad in Content */}
+              <Box sx={{ my: 4 }}>
+                <AdSense slot="inArticle" format="auto" />
+              </Box>
+
+              <Typography variant="h2">2. Use Tecnologia a Seu Favor</Typography>
 
               <Typography variant="h3">Crie um Grupo no WhatsApp</Typography>
               <ul>

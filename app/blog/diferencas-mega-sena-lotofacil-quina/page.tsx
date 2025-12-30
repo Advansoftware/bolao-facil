@@ -265,7 +265,12 @@ export default function ArtigoDiferencasLoteriasPage() {
                 <li>Aproveite os sorteios de segunda a sábado</li>
               </ul>
 
-              <Typography variant="h3">Quina</Typography>
+              {/* Ad in Content */}
+              <Box sx={{ my: 4 }}>
+                <AdSense slot="inArticle" format="auto" />
+              </Box>
+
+              <Typography variant="h2">3. Quina: A Opção Diária</Typography>
               <ul>
                 <li>Faça múltiplos jogos de 6 ou 7 números</li>
                 <li>Aproveite os sorteios diários</li>

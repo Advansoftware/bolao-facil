@@ -530,34 +530,7 @@ export default function LandingPage() {
         </Container>
       </Box>
 
-      {/* Footer */}
-      <Box
-        component="footer"
-        sx={{
-          py: 4,
-          borderTop: "1px solid rgba(255,255,255,0.08)",
-        }}
-      >
-        <Container maxWidth="lg">
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 2,
-            }}
-          >
-            <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: 14 }}>
-              © {new Date().getFullYear()} Bolão Fácil. Todos os direitos
-              reservados.
-            </Typography>
-            <Typography sx={{ color: "rgba(255,255,255,0.4)", fontSize: 12 }}>
-              Este site não tem vínculo com a Caixa Econômica Federal.
-            </Typography>
-          </Box>
-        </Container>
-      </Box>
+
 
       {/* Blog Section */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
@@ -772,27 +745,27 @@ export default function LandingPage() {
 
         {/* View All Blog Button */}
         <Box sx={{ textAlign: "center", mt: 6 }}>
-          <Link href="/blog" style={{ textDecoration: "none" }}>
-            <Button
-              variant="outlined"
-              size="large"
-              sx={{
-                borderColor: "rgba(255,255,255,0.2)",
-                color: "white",
-                px: 4,
-                py: 1.5,
-                fontSize: "1rem",
-                fontWeight: 600,
-                borderRadius: 2,
-                "&:hover": {
-                  borderColor: "#22c55e",
-                  bgcolor: "rgba(34, 197, 94, 0.1)",
-                },
-              }}
-            >
-              Ver Todos os Artigos do Blog
-            </Button>
-          </Link>
+          <Button
+            component={Link}
+            href="/blog"
+            variant="outlined"
+            size="large"
+            sx={{
+              borderColor: "rgba(255,255,255,0.2)",
+              color: "white",
+              px: 4,
+              py: 1.5,
+              fontSize: "1rem",
+              fontWeight: 600,
+              borderRadius: 2,
+              "&:hover": {
+                borderColor: "#22c55e",
+                bgcolor: "rgba(34, 197, 94, 0.1)",
+              },
+            }}
+          >
+            Ver Todos os Artigos do Blog
+          </Button>
         </Box>
       </Container>
 

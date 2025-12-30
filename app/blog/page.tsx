@@ -66,6 +66,36 @@ const blogPosts = [
     category: "Especial",
     color: "#ec4899",
   },
+  {
+    slug: "o-que-e-fechamento-loterico",
+    title: "O Que é Fechamento Lotérico e Como Funciona?",
+    description:
+      "Descubra como utilizar a matemática a seu favor para gastar menos em apostas com mais números (garantindo prêmios secundários).",
+    date: "2024-12-30",
+    readTime: "6 min",
+    category: "Estratégia",
+    color: "#e11d48",
+  },
+  {
+    slug: "como-resgatar-premio-seguranca",
+    title: "Como Resgatar seu Prêmio de Loteria com Segurança",
+    description:
+      "Ganhou? Parabéns! Veja o guia passo a passo de como resgatar seu prêmio na Caixa com total segurança e discrição.",
+    date: "2024-12-30",
+    readTime: "5 min",
+    category: "Segurança",
+    color: "#0891b2",
+  },
+  {
+    slug: "probabilidade-chances-ganhar",
+    title: "Probabilidades: Quais as Reais Chances de Ganhar?",
+    description:
+      "Análise matemática honesta sobre suas chances na Mega-Sena, Lotofácil e Quina. Entenda a estatística por trás do jogo.",
+    date: "2024-12-30",
+    readTime: "7 min",
+    category: "Matemática",
+    color: "#7c3aed",
+  },
 ];
 
 export default function BlogPage() {
