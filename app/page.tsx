@@ -119,6 +119,11 @@ const faqs = [
     answer:
       "Sim! O Bolão Fácil gera um PDF profissional com todos os jogos, participantes e valores. Você pode imprimir ou compartilhar digitalmente.",
   },
+  {
+    question: "O Bolão Fácil tem bolão de futebol?",
+    answer:
+      "Atualmente o Bolão Fácil é focado em bolões de loteria (Mega-Sena, Lotofácil, Quina, etc). Estamos trabalhando para adicionar suporte a bolões de futebol em breve!",
+  },
 ];
 
 export default function LandingPage() {

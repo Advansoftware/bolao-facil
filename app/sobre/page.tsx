@@ -10,7 +10,7 @@ import CodeIcon from "@mui/icons-material/Code";
 export const metadata: Metadata = {
   title: "Sobre o Bolão Fácil",
   description:
-    "Conheça o Bolão Fácil, a melhor ferramenta gratuita para organizar bolões de loteria entre amigos. 100% privado, seguro e fácil de usar.",
+    "Conheça o Bolão Fácil, a melhor ferramenta gratuita para organizar bolões de loteria entre amigos. Mega-Sena, Lotofácil, Quina e mais. 100% privado e fácil de usar.",
 };
 
 export default function SobrePage() {
@@ -77,6 +77,16 @@ export default function SobrePage() {
           <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "1.2rem" }}>
             A melhor ferramenta para organizar bolões de loteria entre amigos
           </Typography>
+          <Chip
+            label="🎰 Atualmente focado em Loterias"
+            sx={{
+              mt: 2,
+              bgcolor: "rgba(34, 197, 94, 0.15)",
+              color: "#22c55e",
+              fontWeight: 600,
+              border: "1px solid rgba(34, 197, 94, 0.3)",
+            }}
+          />
         </Box>
 
         {/* Main Content */}
@@ -109,9 +119,23 @@ export default function SobrePage() {
             sx={{ color: "rgba(255,255,255,0.7)", fontSize: "1.1rem", lineHeight: 1.8, mb: 3 }}
           >
             Nossa missão é fornecer uma ferramenta gratuita, simples e eficiente que permita
-            qualquer pessoa organizar bolões de forma profissional, sem complicação e com total
+            qualquer pessoa organizar bolões de loteria de forma profissional, sem complicação e com total
             controle sobre seus dados.
           </Typography>
+          <Paper
+            sx={{
+              p: 2,
+              mt: 3,
+              bgcolor: "rgba(59, 130, 246, 0.1)",
+              border: "1px solid rgba(59, 130, 246, 0.3)",
+              borderRadius: 2,
+            }}
+          >
+            <Typography sx={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem" }}>
+              ⚽ <strong>Em breve:</strong> Bolões de Futebol! Estamos trabalhando para trazer suporte a bolões
+              esportivos em uma futura atualização.
+            </Typography>
+          </Paper>
 
           <Typography
             variant="h4"
