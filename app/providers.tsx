@@ -2,6 +2,7 @@
 
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { ReactNode } from "react";
+import { FeedbackButton } from "@/components/FeedbackButton";
 
 const darkTheme = createTheme({
   palette: {
@@ -47,6 +48,8 @@ export function Providers({ children }: { children: ReactNode }) {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       {children}
+      <FeedbackButton />
     </ThemeProvider>
   );
 }
+
